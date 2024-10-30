@@ -1,0 +1,10 @@
+:root{
+    --navy: #28324d;
+    --skyblue: #d0deea;
+    --purple: #9e53b0;
+    --cyan: #87ccc5;
+}
+
+body{
+    background-color: var(--navy);
+}
