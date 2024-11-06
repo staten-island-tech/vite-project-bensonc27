@@ -1,10 +1,7 @@
 :root{
-    --white: #fcfeff;
-    --navy: #252852;
+    --green: #2c3e41;
+    --white: #f7f2f5;
     --purple: #561bad;
     --blue: #02adfd;
 }
 
-body{
-    background-color: var(--white);
-}

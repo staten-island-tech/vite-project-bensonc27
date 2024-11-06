@@ -1,4 +1,6 @@
 import "../CSS/style.css";
+import { characters } from "../JS/characters";
+
 const DomSelectors = {
   warriorclass: document.querySelector(".class"),
   normal: document.querySelector(".normal"),
@@ -8,19 +10,20 @@ const DomSelectors = {
 
 function Start() {
   normal.addEventListener("click", function () {
-    characters.forEach((characters) =>
-      insertAdjacentHtml(
+    characters.forEach((character) =>
+      normal.insertAdjacentHTML(
         "afterbegin",
         `
-        <div class = card>,
-        <h1 class = name> Character: ${characters.name} </h1>,
-        <image class = picture> ${characters.image} </image>,
-        <h2 class = show> ${characters.show} </h2>,
-        <h2 class = class> ${characters.class} </h2>,
-        <text class = strength>${characters.strength} </text>,
-        <text class = weakness>${characters.weakness} </text>
+        <div class = card>
+        <h1 class = name> Character: ${characters.name} </h1>
+        <img class = picture> ${characters.image} </img>
+        <h2 class = show> ${characters.show} </h2>
+        <h2 class = class> ${characters.class} </h2>
+        <p class = strength>${characters.strength} </p>
+        <p class = weakness>${characters.weakness} </p>
+        <p class = cost>${characters.cost} </p>
         </div>
-          `
+        `
       )
     );
   });
@@ -42,7 +45,8 @@ function Classfilter() {
       <h2 class = show> ${characters.show} <h2>,
       <h2 class = class> ${characters.class} <h2>,
       <text class = strength>${characters.strength} <text>,
-      <text class = weakness>${characters.weakness}<text>
+      <text class = weakness>${characters.weakness}<text>,
+      <text class = cost>${characters.cost} </text>
       <div>
         `
       )
@@ -55,6 +59,8 @@ function Sale() {
     (characters) => (characters.strength = Speed)
   );
 
+  const discount = Speed.cost.map((x) => x * 0.75);
+
   sale.addEventlistener("click", function () {
     Speed.forEach((characters) =>
       insertAdjacentHtml(
@@ -66,7 +72,8 @@ function Sale() {
       <h2 class = show> ${characters.show} <h2>,
       <h2 class = class> ${characters.class} <h2>,
       <text class = strength>${characters.strength} <text>,
-      <text class = weakness>${characters.weakness}<text>
+      <text class = weakness>${characters.weakness}<text>,
+      <text class = cost>${characters.cost} </text>
       <div>
         `
       )
@@ -90,7 +97,8 @@ function FilterWeakness() {
       <h2 class = show> ${characters.show} <h2>,
       <h2 class = class> ${characters.class} <h2>,
       <text class = strength>${characters.strength} <text>,
-      <text class = weakness>${characters.weakness}<text>
+      <text class = weakness>${characters.weakness}<text>,
+      <text class = cost>${characters.cost} </text>
       <div>
         `
       )

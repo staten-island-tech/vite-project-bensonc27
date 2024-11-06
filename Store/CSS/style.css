@@ -12,7 +12,7 @@ body,
 
 body{
   justify-content: space-evenly;
-
+  background-color: var(--green) ;
 }
 
 
