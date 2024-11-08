@@ -2,105 +2,107 @@ import "../CSS/style.css";
 import { characters } from "../JS/characters";
 
 const DomSelectors = {
-  warriorclass: document.querySelector(".class"),
-  all: document.querySelector(".all"),
-  sale: document.querySelector(".sale"),
   weakness: document.querySelector(".weakness"),
   container: document.querySelector(".container"),
+  all: document.querySelector(".all"),
+  warrior: document.querySelector(".class"),
+  sale: document.querySelector(".sale"),
 };
 
 function inserttoHTML() {
-  characters.forEach((character) => {
-    const CardHTML = `<div class = card>
-        <h1 class = "name"> Character: ${character.name} </h1>
-        <img class = "picture" src="${character.image}>
-        <h2 class = "show"> Anime: ${character.show} </h2>
-        <h2 class = "class"> Class: ${character.class} </h2>
-        <p class = "strength"> Strength: ${character.strength} </p>
-        <p class = "weakness"> Weakness: ${character.weakness} </p>
-        <p class = "cost">Cost: ${character.cost} coins </p>
-        </div>`;
-    DomSelectors.container.insertAdjacentHTML("beforeend", CardHTML);
+  DomSelectors.all.addEventListener("click", function () {
+    characters.forEach((character) => {
+      const CardHTML = `<div class = card>
+          <h1 class = "name"> Character: ${character.name} </h1>
+          <img class = "picture" src="${character.image}>
+          <p class = "show"> Anime: ${character.show} </p>
+          <p class = "class"> Class: ${character.class} </p>
+          <p class = "strength"> Strength: ${character.strength} </p>
+          <p class = "weakness"> Weakness: ${character.weakness} </p>
+          <p class = "cost">Cost: ${character.cost} coins </p>
+          </div>`;
+      DomSelectors.container.insertAdjacentHTML("beforeend", CardHTML);
+    });
   });
 }
 
 inserttoHTML();
 
-// function Classfilter() {
-//   const Warrior = characters.filter(
-//     (characters) => (characters.class = Warrior)
-//   );
+function Classfilter() {
+  const Warrior = characters.filter(
+    (character) => character.class === "Warrior"
+  );
 
-//   warriorclass.addEventlistener("click", function () {
-//     Warrior.forEach((characters) =>
-//       insertAdjacentHtml(
-//         "afterbegin",
-//         `
-//       <div class = card>,
-//       <h1 class = name> Character: ${characters.name} <h1>,
-//       <image class = picture> ${characters.image} <image>,
-//       <h2 class = show> ${characters.show} <h2>,
-//       <h2 class = class> ${characters.class} <h2>,
-//       <text class = strength>${characters.strength} <text>,
-//       <text class = weakness>${characters.weakness}<text>,
-//       <text class = cost>${characters.cost} </text>
-//       <div>
-//         `
-//       )
-//     );
-//   });
-// }
+  DomSelectors.warrior.addEventListener("click", function () {
+    DomSelectors.container.innerHTML = "";
 
-// function Sale() {
-//   const Speed = characters.filter(
-//     (characters) => (characters.strength = Speed)
-//   );
+    Warrior.forEach((character) => {
+      const CardHTML = `<div class = card>
+  <h1 class = "name"> Character: ${character.name} </h1>
+  <img class = "picture" src="${character.image}>
+  <p class = "show"> Anime: ${character.show} </p>
+  <p class = "class"> Class: ${character.class} </p>
+  <p class = "strength"> Strength: ${character.strength} </p>
+  <p class = "weakness"> Weakness: ${character.weakness} </p>
+  <p class = "cost">Cost: ${character.cost} coins </p>
+  </div>`;
 
-//   const discount = Speed.cost.map((x) => x * 0.75);
+      DomSelectors.container.insertAdjacentHTML("beforeend", CardHTML);
+    });
+  });
+}
 
-//   sale.addEventlistener("click", function () {
-//     Speed.forEach((characters) =>
-//       insertAdjacentHtml(
-//         "afterbegin",
-//         `
-//       <div class = card>,
-//       <h1 class = name> Character: ${characters.name} <h1>,
-//       <image class = picture> ${characters.image} <image>,
-//       <h2 class = show> ${characters.show} <h2>,
-//       <h2 class = class> ${characters.class} <h2>,
-//       <text class = strength>${characters.strength} <text>,
-//       <text class = weakness>${characters.weakness}<text>,
-//       <text class = cost>${characters.cost} </text>
-//       <div>
-//         `
-//       )
-//     );
-//   });
-// }
+Classfilter();
 
-// function FilterWeakness() {
-//   const Emotions = characters.filter(
-//     (characters) => (characters.weakness = Emotions)
-//   );
+function Sale() {
+  const Speed = characters.filter(
+    (characters) => characters.strength === "Speed"
+  );
 
-//   weakness.addEventlistener("click", function () {
-//     Emotions.forEach((characters) =>
-//       insertAdjacentHtml(
-//         "afterbegin",
-//         `
-//       <div class = card>,
-//       <h1 class = name> Character: ${characters.name} <h1>,
-//       <image class = picture> ${characters.image} <image>,
-//       <h2 class = show> ${characters.show} <h2>,
-//       <h2 class = class> ${characters.class} <h2>,
-//       <text class = strength>${characters.strength} <text>,
-//       <text class = weakness>${characters.weakness}<text>,
-//       <text class = cost>${characters.cost} </text>
-//       <div>
-//         `
-//       )
-//     );
-//   });
-// }
+  const discount = Speed.map((character) => character.cost * 0.75);
+
+  DomSelectors.sale.addEventListener("click", function () {
+    DomSelectors.container.innerHTML = "";
+
+    Speed.forEach((character, index) => {
+      const CardHTML = `<div class = card>
+      <h1 class = "name"> Character: ${character.name} </h1>
+      <img class = "picture" src="${character.image}>
+      <p class = "show"> Anime: ${character.show} </p>
+      <p class = "class"> Class: ${character.class} </p>
+      <p class = "strength"> Strength: ${character.strength} </p>
+      <p class = "weakness"> Weakness: ${character.weakness} </p>
+      <p class = "cost">Cost: ${discount[index]} coins </p>
+      </div>`;
+
+      DomSelectors.container.insertAdjacentHTML("beforeend", CardHTML);
+    });
+  });
+}
+
+Sale();
+
+function FilterWeakness() {
+  const Emotions = characters.filter(
+    (characters) => (characters.weakness = Emotions)
+  );
+
+  weakness.addEventlistener("click", function () {
+    DomSelectors.container.innerHTML = "";
+
+    Emotions.forEach((character) => {
+      const CardHTML = `<div class = card>
+      <h1 class = "name"> Character: ${character.name} </h1>
+      <img class = "picture" src="${character.image}>
+      <p class = "show"> Anime: ${character.show} </p>
+      <p class = "class"> Class: ${character.class} </p>
+      <p class = "strength"> Strength: ${character.strength} </p>
+      <p class = "weakness"> Weakness: ${character.weakness} </p>
+      <p class = "cost">Cost: ${character.cost} coins </p>
+      </div>`;
+      DomSelectors.container.insertAdjacentHTML("beforeend", CardHTML);
+    });
+  });
+}
 
 //includes can also be used

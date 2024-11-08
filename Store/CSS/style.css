@@ -21,6 +21,9 @@ body{
   margin: 1rem;
   width: 21%;
   height: 20rem;
+  background-color: var(--purple);
+  color: var(--white);
+  font-size: 20px;
 }
 
 .container{
