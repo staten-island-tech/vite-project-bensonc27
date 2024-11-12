@@ -7,6 +7,7 @@ body,
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
+
 }
 
 body{
@@ -17,12 +18,12 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 4px solid var(--blue);
+  border: 4px solid var(--aqua);
   margin: 1rem;
-  width: 30%;
-  height: 30rem;
-  background-color: var(--purple);
-  color: var(--white);
+  width: 28%;
+  height: 38rem;
+  background-color: var(--fern);
+  color: var(--cream);
 }
 
 .container{
@@ -34,8 +35,23 @@ body{
 .picture{
   width: 60%;
   height: 65%;
-  margin-top: 3%;
-  margin-bottom: 3%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
   object-fit: cover;
 }
 
+h1, h2, p{
+  text-align: center;
+}
+
+h1{
+  font-size: var(--h1);
+}
+
+h2{
+  font-size: var(--h2);
+}
+
+p{
+  font-size: var(--p)
+}

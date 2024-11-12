@@ -1,7 +1,22 @@
 :root{
-    --green: #2c3e41;
-    --white: #f7f2f5;
-    --purple: #561bad;
-    --blue: #02adfd;
+    --green: #345830;
+    --fern: #4A7856;
+    --cream: #EAEFBD;
+    --aqua: #A5F8D3;
+    --h1: 1.953rem;
+    --h2: 1.563rem;
+    --p: 1.25rem;
+}
+
+:light{
+ --uranian: #A9D3FF
+ --jordy: #96C5F7
+ --gray: #93ACB5
+ --dim: #6C756B
+}
+
+:dark{
+    #25383C
+    #264235
 }
 
