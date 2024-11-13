@@ -7,6 +7,10 @@ const DomSelectors = {
   all: document.querySelector(".all"),
   warrior: document.querySelector(".class"),
   sale: document.querySelector(".sale"),
+  dark: document.querySelector(".Dark"),
+  light: document.querySelector(".Light"),
+  mage: document.querySelector(".mage"),
+  swordsman: document.querySelector(".swordsman"),
 };
 
 function createCard(array) {
@@ -34,6 +38,18 @@ DomSelectors.warrior.addEventListener("click", function () {
     (character) => character.class == "Warrior"
   );
   createCard(warriors);
+});
+
+DomSelectors.mage.addEventListener("click", function () {
+  const mage = characters.filter((character) => character.class == "Mage");
+  createCard(mage);
+});
+
+DomSelectors.swordsman.addEventListener("click", function () {
+  const swordsman = characters.filter(
+    (character) => character.class == "Swordsman"
+  );
+  createCard(swordsman);
 });
 
 function Sale() {
@@ -69,4 +85,14 @@ DomSelectors.weakness.addEventListener("click", function () {
     (characters) => characters.weakness === "Emotions"
   );
   createCard(Emotions);
+});
+
+DomSelectors.dark.addEventListener("click", function () {
+  document.body.classList.remove("normal", "light");
+  document.body.classList.add("dark");
+});
+
+DomSelectors.light.addEventListener("click", function () {
+  document.body.classList.remove("normal", "dark");
+  document.body.classList.add("light");
 });

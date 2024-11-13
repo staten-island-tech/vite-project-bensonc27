@@ -1,22 +1,27 @@
 :root{
-    --green: #345830;
-    --fern: #4A7856;
-    --cream: #EAEFBD;
-    --aqua: #A5F8D3;
+    font-family: "Sofadi One", serif;
+    font-weight: 400;
+    font-style: normal;
+    --background: #345830;
+    --cardback: #4A7856;
+    --text: #EAEFBD;
+    --border: #A5F8D3;
+    --buttons:#F8333C;
     --h1: 1.953rem;
     --h2: 1.563rem;
     --p: 1.25rem;
 }
 
-:light{
- --uranian: #A9D3FF
- --jordy: #96C5F7
- --gray: #93ACB5
- --dim: #6C756B
+.light{
+ --background: #A9D3FF;
+ --cardback: #96C5F7;
+ --border: #93ACB5;
+ --text: #6C756B;
 }
 
-:dark{
-    #25383C
-    #264235
+.dark{
+ --background: #1D272B;
+ --cardback: #262833;
+ --border: #122f28;
+ --text: #886F68;
 }
-
