@@ -65,14 +65,5 @@ p{
 
 button{
 margin-left: 5px;
-background-color: var(--border);
 color:var(--buttons);
-}
-
-.Dark{
-  background-color: var(--background);
-}
-
-.Light{
-  background-color: var(--cardback);
 }
