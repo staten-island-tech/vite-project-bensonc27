@@ -1,32 +1,32 @@
-:root{
-    font-family: "Sofadi One", serif;
-    font-weight: 400;
-    font-style: normal;
-    --background: #345830;
-    --cardback: #4A7856;
-    --text: #EAEFBD;
-    --border: #A5F8D3;
-    --bback: #5adbb5;
-    --bbtext: #33b249;
-    --h1: 1.953rem;
-    --h2: 1.563rem;
-    --p: 1.25rem;
+:root {
+  font-family: "Sofadi One", serif;
+  font-weight: 400;
+  font-style: normal;
+  --background: #345830;
+  --cardback: #4a7856;
+  --text: #eaefbd;
+  --border: #a5f8d3;
+  --bback: #5adbb5;
+  --bbtext: #33b249;
+  --h1: 1.953rem;
+  --h2: 1.563rem;
+  --p: 1.25rem;
 }
 
-.light{
- --background: #A9D3FF;
- --cardback: #96C5F7;
- --border: #93ACB5;
- --text: #6C756B;
- --bback: #55c2da;
- --bbtext:  #5783db;
+.light {
+  --background: #a9d3ff;
+  --cardback: #96c5f7;
+  --border: #93acb5;
+  --text: #6c756b;
+  --bback: #55c2da;
+  --bbtext: #5783db;
 }
 
-.dark{
- --background: #1D272B;
- --cardback: #262833;
- --border: #122f28;
- --text: #886F68;
- --bback: #014040;
- --bbtext:  #172626;
+.dark {
+  --background: #1d272b;
+  --cardback: #262833;
+  --border: #122f28;
+  --text: #886f68;
+  --bback: #014040;
+  --bbtext: #172626;
 }

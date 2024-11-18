@@ -1,20 +1,19 @@
 @import "variables.css";
 
 html,
-body, 
+body,
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
-
 }
 
-body{
-  background-color: var(--background) ;
+body {
+  background-color: var(--background);
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,13 +25,13 @@ body{
   color: var(--text);
 }
 
-.container{
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.picture{
+.picture {
   width: 60%;
   height: 65%;
   margin-top: 2.5%;
@@ -40,35 +39,37 @@ body{
   object-fit: cover;
 }
 
-h1, h2, p{
+h1,
+h2,
+p {
   text-align: center;
 }
 
-h1{
+h1 {
   font-size: var(--h1);
 }
 
-h2{
+h2 {
   font-size: var(--h2);
 }
 
-p{
-  font-size: var(--p)
+p {
+  font-size: var(--p);
 }
 
-.buttoncontainer{
+.buttoncontainer {
   display: flex;
-  flex-direction: row; 
-  justify-content: center; 
-  align-items: center; 
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-button{
+button {
   background-color: var(--bback);
   color: var(--bbtext);
-  border:none; 
-  border-radius:5px; 
-  padding:8px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
   margin-left: 5px;
   font-weight: 1000;
 }
