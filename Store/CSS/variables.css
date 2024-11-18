@@ -6,7 +6,8 @@
     --cardback: #4A7856;
     --text: #EAEFBD;
     --border: #A5F8D3;
-    --buttons:#F8333C;
+    --bback: #5adbb5;
+    --bbtext: #33b249;
     --h1: 1.953rem;
     --h2: 1.563rem;
     --p: 1.25rem;
@@ -17,6 +18,8 @@
  --cardback: #96C5F7;
  --border: #93ACB5;
  --text: #6C756B;
+ --bback: #55c2da;
+ --bbtext:  #5783db;
 }
 
 .dark{
@@ -24,4 +27,6 @@
  --cardback: #262833;
  --border: #122f28;
  --text: #886F68;
+ --bback: #014040;
+ --bbtext:  #172626;
 }

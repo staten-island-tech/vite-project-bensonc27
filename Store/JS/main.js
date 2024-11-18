@@ -66,8 +66,8 @@ function Sale() {
       const CardHTML = `<div class = card>
       <h1 class = "name"> Character: ${character.name} </h1>
       <img class = "picture" src="${character.image_url}">
-      <p class = "show"> Anime: ${character.show} </p>
-      <p class = "class"> Class: ${character.class} </p>
+      <h2 class = "show"> Anime: ${character.show} </h2>
+      <h2 class = "class"> Class: ${character.class} </h2>
       <p class = "strength"> Strength: ${character.strength} </p>
       <p class = "weakness"> Weakness: ${character.weakness} </p>
       <p class = "cost">Cost: ${discount[index]} coins </p>
